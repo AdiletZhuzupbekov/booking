@@ -7,7 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@Controller
+@Controller("/")
 public class HomeController {
     private final HotelService hotelService;
 
@@ -15,7 +15,7 @@ public class HomeController {
         this.hotelService = hotelService;
     }
 
-    @GetMapping("/https://booking-kg.herokuapp.com/")
+    @GetMapping
     public String homePage(Model model){
         model.addAttribute("title","Booking");
         HotelServiceResponse[] hotels = hotelService.getHotels();
