@@ -15,7 +15,7 @@ public class HomeController {
         this.hotelService = hotelService;
     }
 
-    @GetMapping("/")
+    @GetMapping("/https://booking-kg.herokuapp.com/")
     public String homePage(Model model){
         model.addAttribute("title","Booking");
         HotelServiceResponse[] hotels = hotelService.getHotels();
